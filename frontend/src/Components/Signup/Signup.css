@@ -1,0 +1,130 @@
+.text-lg{
+  font-size: 1rem; /* or sometimes even fixed px */
+}
+.sgup-btn{
+  padding: 0.5rem !important;
+}
+/* Responsive */
+@media (max-width: 900px) {
+    .signup-box input{
+    padding: 0.5rem;
+     font-size: 0.95rem;
+  }
+  .pwd{
+    padding: 0.4rem !important;
+  }
+  .eye-icon{
+    padding-left: 0.2rem;
+    padding-right: 0.6rem;
+  }
+  .signup-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .signup-btn {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .signup-footer {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 640px) {
+  .signup-box input{
+    padding: 0.4rem;
+  }
+  .sup-container{
+    padding-bottom: 1rem;
+  }
+  .signup-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .signup-btn {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .signup-footer {
+    font-size: 0.9rem;
+  }
+}
+/* Background image for mobile (640px and below) */
+.signup-wrapper {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+
+.signup-bg-image {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .signup-bg-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../Assets/bg4.avif'); /* adjust path if needed */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Light and not distracting */
+    z-index: 0;
+  }
+
+  .signup-wrapper .max-w-md {
+    background-color: rgba(255, 255, 255, 0.409); /* Soft white background */
+  }
+.signup-wrapper input,
+.signup-wrapper input[type="file"]{
+  background-color: white;
+  color: black;
+  /* border: 0.1rem solid rgb(139, 137, 137); */
+  /* padding: 0.75rem; */
+  border-radius: 0.375rem;
+  width: 100%;
+}
+.signup-wrapper input[type="password"] {
+  padding: 0.5rem !important;
+}
+.signup-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sgup-btn{
+  padding: 0.5rem !important;
+}
+.signup-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../Assets/bg4.avif'); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3); /* 👈 Darken image */
+  z-index: 0;
+}
+
+/* This holds the form above the background */
+.signup-content {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white; /* 👈 Light form */
+  padding: 1.3rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+}

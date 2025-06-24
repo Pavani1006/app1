@@ -1,0 +1,27 @@
+
+
+/* ✅ Your custom toast background */
+.custom-toast {
+  background: linear-gradient(to right, #2c5f6b, #1e96a3) !important;
+  color: white !important;
+  font-weight: 500;
+  font-size: 16px;
+}
+.custom-toast-error{
+    background: rgb(190, 44, 44);
+    color: white;
+}
+.custom-toast-error .Toastify__progress-bar {
+  background: white !important; /* this overrides green */
+}
+.custom-toast-error .Toastify__toast-icon svg {
+  fill: white !important;  /* or any other color like #ffeb3b */
+}
+/* ✅ Force override progress bar color */
+.custom-toast .Toastify__progress-bar {
+  background: white !important; /* this overrides green */
+}
+/* Change success icon (tick mark) color */
+.custom-toast .Toastify__toast-icon svg {
+  fill: white !important;  /* or any other color like #ffeb3b */
+}

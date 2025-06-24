@@ -1,0 +1,100 @@
+/* Mobile-first default styles */
+.homepage-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+.card {
+  width: 90%;
+  max-width: 900px;
+  height: 90%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.card-heading {
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: black;
+}
+
+.left-image {
+  display: none; /* hidden by default */
+}
+
+.form-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+}
+/* Between 640px and 750px: Shrink image width and height */
+@media (min-width: 700px) and (max-width: 920px) {
+  .left-image {
+    width: 40%;
+  }
+
+  .left-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain; /* So the image doesn't stretch */
+    margin-left: 1rem;    /* Optional: Adjust for spacing */
+  }
+
+  .form-area {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .card-heading {
+    font-size: 1.5rem; /* Slightly smaller title */
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 641px) {
+  .card-content {
+    flex-direction: row;
+  }
+
+  .left-image {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+
+  .left-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .form-area {
+    width: 50%;
+    padding-bottom: 2rem;
+  }
+
+  .card-heading {
+    color: black;
+  }
+}
