@@ -34,6 +34,7 @@ function Login({ setLoginPage }) {
         });
       } else if (res.data.status === "Success") {
         localStorage.setItem("token", res.data.token);
+        console.log("Rhisi s tooken ",localStorage.getItem('token'))
         localStorage.setItem("userId", res.data.userId);
         localStorage.setItem("username", res.data.username);
         toast.success("Login successful!", {

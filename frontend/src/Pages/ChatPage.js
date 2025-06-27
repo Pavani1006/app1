@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import ChatSidebar from "./ChatSidebar";
 import ChatWindow from "./ChatWindow";
 
 const ChatPage = () => {
-  return (
+   const [selectedUser, setSelectedUser] = useState(null); 
+   return (
     <div className="flex h-screen">
       <div className="w-1/3 border-r">
-        <ChatSidebar />
+        {/* ✅ Pass setSelectedUser to sidebar */}
+        <ChatSidebar setSelectedUser={setSelectedUser} />
       </div>
       <div className="w-2/3">
-        <ChatWindow />
+        {/* ✅ Pass selectedUser to ChatWindow */}
+        <ChatWindow selectedUser={selectedUser} />
       </div>
     </div>
   );
