@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <div className="homepage-container">
       <div className="card">
-        <div className="card-heading">Chat App</div>
+        <div className="card-heading">Talk Space</div>
 
         <div className="card-content">
           {/* Left image for larger screens */}

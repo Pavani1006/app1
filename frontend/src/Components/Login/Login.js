@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaCheck } from "react-icons/fa";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
@@ -37,16 +37,39 @@ function Login({ setLoginPage }) {
         console.log("Rhisi s tooken ",localStorage.getItem('token'))
         localStorage.setItem("userId", res.data.userId);
         localStorage.setItem("username", res.data.username);
-        toast.success("Login successful!", {
+
+toast.success("Login Successfull!", {
   position: "top-right",
-  autoClose: 2000,
+  autoClose: 6000,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,
   draggable: true,
-  className:"custom-toast",
-    onClose: () => navigate("/chats"),
+  style: {
+    background: '#28a745',     // green background
+    color: '#fff',              // white text
+    fontWeight: 'bold'
+  },
+  icon: ({ theme, type }) => (
+    <div
+      style={{
+        backgroundColor: '#fff',  // white circle
+        borderRadius: '50%',
+        padding: '5px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontWeight:'400'
+      }}
+    >
+      <FaCheck color="#28a745" size={14} />
+    </div>
+  ),
+  onClose: () => navigate("/chats"),
 });
+
+
+
 
         // You can redirect or change view here
       } else {
